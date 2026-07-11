@@ -10,14 +10,6 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        glutify: {
-          cream: "#F8F6EE",
-          card: "#FFFFFF",
-          ink: "#181811",
-          lime: "#D3F04C",
-          "lime-soft": "#EAF7A8",
-          "lime-deep": "#B6DB2E",
-        },
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",

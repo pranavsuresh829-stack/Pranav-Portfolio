@@ -9,16 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@zxing/browser": "^0.2.1",
-    "@zxing/library": "^0.23.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.3.8",
-    "lucide-react": "^0.407.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.4.0",
-    "tesseract.js": "^7.0.0"
+    "framer-motion": "^11.3.8",
+    "lucide-react": "^0.407.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",
