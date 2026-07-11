@@ -2,7 +2,6 @@ import { CheckResult, SafeSpot, ScanHistoryEntry } from "./types";
 
 const HISTORY_KEY = "glutify:history";
 const SPOTS_KEY = "glutify:spots";
-const DISCLAIMER_KEY = "glutify:disclaimer-acked";
 
 function read<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -66,12 +65,4 @@ export function removeSafeSpot(id: string): SafeSpot[] {
   const spots = getSafeSpots().filter((s) => s.id !== id);
   write(SPOTS_KEY, spots);
   return spots;
-}
-
-export function hasAckedDisclaimer(): boolean {
-  return read<boolean>(DISCLAIMER_KEY, false);
-}
-
-export function ackDisclaimer(): void {
-  write(DISCLAIMER_KEY, true);
 }

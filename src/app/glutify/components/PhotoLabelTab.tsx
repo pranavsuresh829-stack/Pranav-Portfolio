@@ -54,9 +54,12 @@ export default function PhotoLabelTab({
 
   return (
     <div>
-      <h2 className="text-lg font-semibold text-white">Photo of Ingredients Label</h2>
-      <p className="mt-1 text-sm text-white/50">
-        Snap or upload a clear photo of the ingredients text and I&rsquo;ll
+      <h2 className="text-xs font-bold uppercase tracking-wide text-glutify-ink/50">
+        Photo of Ingredients Label
+      </h2>
+      <div className="mt-2 border-t border-black/10" />
+      <p className="mt-3 text-sm text-glutify-ink/50">
+        Snap or upload a clear photo of the ingredients text and Glootie will
         read it and check for gluten.
       </p>
 
@@ -71,14 +74,14 @@ export default function PhotoLabelTab({
       />
 
       {previewUrl ? (
-        <div className="mt-4 overflow-hidden rounded-xl border border-white/10">
+        <div className="mt-4 overflow-hidden rounded-2xl bg-black">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={previewUrl} alt="Ingredients label preview" className="max-h-64 w-full object-contain bg-black" />
+          <img src={previewUrl} alt="Ingredients label preview" className="max-h-64 w-full object-contain" />
         </div>
       ) : (
         <label
           htmlFor="label-photo-input"
-          className="mt-4 flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-white/20 py-10 text-sm text-white/60 transition hover:border-emerald-500/40 hover:text-white"
+          className="mt-4 flex cursor-pointer items-center justify-center gap-2 rounded-2xl border border-dashed border-black/20 bg-glutify-cream py-10 text-sm font-medium text-glutify-ink/70 transition hover:border-glutify-lime-deep hover:text-glutify-ink"
         >
           <Upload className="h-4 w-4" />
           Tap to take a photo or upload a label image
@@ -88,7 +91,7 @@ export default function PhotoLabelTab({
       {previewUrl && (
         <button
           onClick={() => fileInputRef.current?.click()}
-          className="mt-2 text-sm text-white/40 hover:text-white"
+          className="mt-2 text-sm font-medium text-glutify-ink/50 hover:text-glutify-ink"
         >
           Choose a different photo
         </button>
@@ -97,7 +100,7 @@ export default function PhotoLabelTab({
       <button
         onClick={readAndCheck}
         disabled={!file || loading}
-        className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 py-3 font-medium text-emerald-950 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:opacity-40"
+        className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-glutify-ink py-3.5 font-semibold text-glutify-lime transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {loading ? (
           <>
@@ -109,7 +112,7 @@ export default function PhotoLabelTab({
         )}
       </button>
 
-      {error && <p className="mt-2 text-sm text-rose-400">{error}</p>}
+      {error && <p className="mt-2 text-sm text-rose-600">{error}</p>}
     </div>
   );
 }

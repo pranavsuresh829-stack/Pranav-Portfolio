@@ -5,8 +5,8 @@
   "start_url": "/glutify",
   "scope": "/glutify",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#10b981",
+  "background_color": "#F8F6EE",
+  "theme_color": "#181811",
   "orientation": "portrait",
   "icons": [
     {
